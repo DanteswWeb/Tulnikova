@@ -1,11 +1,11 @@
 window.onload = function() {
 
-	new fullpage('#fullpage', {
-		anchors:['h', 'who'],
-		licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
-		autoScrolling: true,
-		fitToSection: true
-	});
+	// new fullpage('#fullpage', {
+	// 	anchors:['h', 'who'],
+	// 	licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
+	// 	autoScrolling: true,
+	// 	fitToSection: true
+	// });
 
 	skrollr.init();
 	slider();
@@ -16,27 +16,27 @@ console.log('dfghd')
 
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
-    
+
     //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-        
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-      
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
+    // $('a[href^="#"]').on('click', function (e) {
+    //     e.preventDefault();
+    //     $(document).off("scroll");
+		//
+    //     $('a').each(function () {
+    //         $(this).removeClass('active');
+    //     })
+    //     $(this).addClass('active');
+		//
+    //     var target = this.hash,
+    //         menu = target;
+    //     $target = $(target);
+    //     $('html, body').stop().animate({
+    //         'scrollTop': $target.offset().top+2
+    //     }, 500, 'swing', function () {
+    //         window.location.hash = target;
+    //         $(document).on("scroll", onScroll);
+    //     });
+    // });
 });
 
 function onScroll(event){
@@ -115,7 +115,7 @@ function slider() {
 						bigpics[i].style.opacity = 1;
 					}, 20);
 				}, 20);
-				
+
 			});
 	});
 
@@ -139,13 +139,9 @@ function slider() {
 
 	function border() {
 		buttons.forEach((j, i) =>{
-			if(i !== number) 
+			if(i !== number)
 				buttons[i].style.border = "4px solid rgba(241, 194, 80, 0)";
 		});
 		buttons[number].style.border = "4px solid rgba(241, 194, 80, 1)";
 	}
 }
-
-
-
-
